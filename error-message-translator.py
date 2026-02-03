@@ -75,6 +75,58 @@ def explain_error_message(error_message):
         "RecursionError": (
             "Your function called itself too many times and hit Python’s recursion limit. "
             "There might be a missing base case or the recursion isn’t stopping properly."
+        ),
+        "RuntimeError": (
+            "Something went wrong while the program was running, but it doesn’t fit a more specific category. "
+            "Look at the traceback to identify what triggered it."
+        ),
+        "MemoryError": (
+            "Python ran out of memory while trying to create or hold something large. "
+            "Try working with smaller data, or process it in chunks."
+        ),
+        "TimeoutError": (
+            "An operation took too long and timed out. "
+            "This can happen with network requests or long-running tasks."
+        ),
+        "OSError": (
+            "A system-related operation failed (like file or OS access). "
+            "Check paths, permissions, or the availability of the resource."
+        ),
+        "IOError": (
+            "An input/output operation failed, often related to files or streams. "
+            "Verify the file path, permissions, or device availability."
+        ),
+        "EOFError": (
+            "Python expected more input but reached the end of the file or input stream. "
+            "This can happen when reading input that isn’t there."
+        ),
+        "KeyboardInterrupt": (
+            "The program was manually stopped (usually by pressing Ctrl+C). "
+            "This isn’t a bug—just an interruption."
+        ),
+        "NotImplementedError": (
+            "This means the code intentionally hasn’t been implemented yet. "
+            "You’re calling a method or feature marked as a placeholder."
+        ),
+        "FloatingPointError": (
+            "A floating-point calculation failed. "
+            "This is rare, but can happen with invalid numerical operations."
+        ),
+        "UnicodeDecodeError": (
+            "Python couldn’t decode text using the expected character encoding. "
+            "Try specifying the correct encoding when reading the text."
+        ),
+        "UnicodeEncodeError": (
+            "Python couldn’t encode text into the desired encoding. "
+            "Check the characters in the text and the encoding you’re using."
+        ),
+        "UnicodeError": (
+            "A general Unicode-related error occurred. "
+            "This can involve encoding or decoding issues with text."
+        ),
+        "JSONDecodeError": (
+            "The JSON data isn’t valid. "
+            "Check for missing commas, quotes, or incorrect formatting."
         )
     }
 
@@ -111,3 +163,4 @@ def main():
 # This line actually RUNS your app
 if __name__ == "__main__":
     main()
+
